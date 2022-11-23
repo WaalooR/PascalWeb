@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="nagyonszep.css" rel="stylesheet" />
+    <script src="/geek.js"></script>
+</head>
+<body>
+    <div id="pascal"> 
+    </div>
+    <script>
+        var faktor3 = n => {
+            if (n === 0 || n === 1) {
+                return 1;
+            } else {
+                return n * faktor(n - 1)
+            }
+        }
+        var pascal = document.getElementById("pascal");
+        var meret = 10;
+        for (var s = 0; s <= meret; s++) {
+            var ujSor = document.createElement("div");
+            ujSor.classList.add("sor");
+            pascal.appendChild(ujSor);
+            
+            for (var o = 0; o < s; o++) {
+                var ujElem = document.createElement("div");
+                ujElem.innerHTML = "*";
+                ujElem.classList.add("elem");
+                ujSor.appendChild(ujElem);
+            }
+        }
+        
+    </script>
+</body>
+</html>
